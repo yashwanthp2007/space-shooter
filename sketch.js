@@ -21,7 +21,7 @@ function preload(){
   bulletsImg = loadImage("bullet.png");
 }
 function setup() {
-  createCanvas(displayWidth-0,displayHeight-150);
+  createCanvas(windowWidth, windowHeight);
   engine = Engine.create();
   world = engine.world;
   //player = new Player(200,180);
