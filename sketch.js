@@ -15,10 +15,10 @@ var score = 0;
 var gameState = 1;
 
 function preload(){
-  bg = loadImage("images/galaxy.jpg");
-  alImg = loadImage("images/alien.png");
-  playerImg = loadImage("images/shooter.png");
-  bulletsImg = loadImage("images/bullet.png");
+  bg = loadImage("galaxy.jpg");
+  alImg = loadImage("alien.png");
+  playerImg = loadImage("shooter.png");
+  bulletsImg = loadImage("bullet.png");
 }
 function setup() {
   createCanvas(displayWidth-0,displayHeight-150);
