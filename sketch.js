@@ -13,6 +13,8 @@ var alienGroup,bulletsGroup,alienBulletsGroup;
 var score = 0;
 // gamestate
 var gameState = 1;
+//reset
+var reset;
 
 function preload(){
   bg = loadImage("galaxy.jpg");
@@ -96,9 +98,6 @@ function spawnAliens(){
   if(frameCount% 60===0){
     var al = createSprite(displayWidth,500,20,30);
     al.addImage(alImg);
-    var alBullet = createSprite(al.x,al.y,4,3);
-    alienBulletsGroup.add(alBullet);
-    alBullet.velocityX = -10;
     al.y = Math.round(random(80,400));
     al.velocityX = -10;
     al.scale = 0.9;
@@ -114,6 +113,13 @@ function spawnBullets(){
   bullets.scale = 0.2;
   bulletsGroup.add(bullets);
 }
+
+function reset(){
+  gameState = PLAY;
+  gameOver.visible = false;
+  restart.visible = false;
+}
+
 
 function playerLifes(){
   if(alienGroup.isTouching(player)){
